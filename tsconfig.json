@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "outDir": "./bin",
+    "target": "es5",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext", "ESNext.AsyncIterable"],
+    /* Strict Type-Checking Options */
+    "strict": true,
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "types": ["node"],
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    /* Other Options. tsc --init で今のところ出力されないもの */
+    "noStrictGenericChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "traceResolution": false,
+    "listFiles": false,
+    "stripInternal": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": false,
+    "pretty": false,
+    "noEmitOnError": true
+  },
+  "include": ["./src/**/*.ts", "./src/front/**/*.vue", ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,89 @@
+{
+  "diffEditor.renderSideBySide": false,
+  "editor.colorDecorators": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderControlCharacters": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "all",
+  "editor.snippetSuggestions": "top",
+  "editor.wordWrap": "on",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.variables": {
+    "lang": "ja"
+  },
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    ".*lintrc": "json"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.map": true,
+    "**/node_modules": true,
+    "**/node_modules/": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "html.format.contentUnformatted": "pre,code,textarea, title, h1, h2, h3, h4, h5, h6, p",
+  "html.format.extraLiners": "",
+  "html.format.unformatted": null,
+  "html.format.wrapLineLength": 0,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true
+  },
+  "window.openFoldersInNewWindow": "on",
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.enablePreview": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "css.validate": false,
+  "html.format.endWithNewline": true,
+  "window.zoomLevel": 0,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "eslint.validate": ["vue", "javascript", "typescript"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "vetur.format.defaultFormatter.html": "none",
+  "debug.javascript.usePreview": false,
+  "cSpell.words": [
+    "devtool",
+    "inited",
+    "nosleep",
+    "readwrite",
+    "visibleanime",
+    "webpackconfig",
+  ]
+}
