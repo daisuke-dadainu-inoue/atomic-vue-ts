@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex, { StoreOptions } from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
+import common from '@/front/store/modules/common';
 import { RootState } from './types';
 Vue.use(Vuex);
 
@@ -8,7 +9,9 @@ const store: StoreOptions<RootState> = {
   state: {
     version: '1.0.0',
   },
-  modules: {},
+  modules: {
+    common,
+  },
   plugins: [
     createPersistedState({
       key: 'hoge',

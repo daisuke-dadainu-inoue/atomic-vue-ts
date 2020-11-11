@@ -1,26 +1,17 @@
 <template>
   <signup-template>
     <template v-slot:header>
-      <logo-organism>
-        <template v-slot:logo-img>
-          <logo-img-molecule imgPath="/img/lp/logo@2x.png" alt="" />
-        </template>
-      </logo-organism>
+      <logo-organism> </logo-organism>
     </template>
     <template v-slot:signup>
       <signup-organism>
         <template v-slot:title>
-          <title-molecule title="無料会員登録" />
+          <title-molecule title="ユーザー登録" />
         </template>
-        <template v-slot:note>
-          <note-molecule
-            note="無料登録後、店舗PRメニューをご利用できます。
-            <br />初回ご掲載は2週間分の料金が割引かれます。"
-          />
-        </template>
+        <template v-slot:note> </template>
         <template v-slot:provider-name>
           <input-text-molecule
-            label="会社名称（店舗名でも可）"
+            label="ユーザー名称"
             :validation="validation.providerName"
             :errorText="errorText.providerName"
             :value="newRegistItem.providerName"
@@ -51,64 +42,15 @@
             @change="setPassword"
           />
         </template>
-        <template v-slot:termprivacy>
-          <term-privacy-organism>
-            <template v-slot:tos>
-              <term-privacy-molecule
-                linkFront="ご登録前に当社が定める"
-                linkLabel="利用規約"
-                to="/tos"
-                linkBack="をご確認ください。"
-              />
-            </template>
-            <template v-slot:sct>
-              <term-privacy-molecule
-                linkFront="特定商取引法に基づく表示は"
-                linkLabel="こちら"
-                to="/sct"
-                linkBack="をご覧ください。"
-              />
-            </template>
-            <template v-slot:checkbox>
-              <term-privacy-checkbox-molecule
-                id="term-privacy-checkbox"
-                :value="validation.isRuleCheck"
-                label="利用規約に同意する"
-                @change="checkRules"
-              />
-            </template>
-          </term-privacy-organism>
-        </template>
         <template v-slot:signup-button>
           <button-molecule
-            label="無料で試してみる"
+            label="登録"
             :disabled="isDisabledButton"
             @click="newregist"
             :errorText="errorText.requestError"
           />
         </template>
-        <template v-slot:annotation>
-          <annotation-molecule annotation=" ※迷惑メール設定を行っている方は
-          <br />
-          />
-        </template>
-        <template v-slot:login-link>
-          <login-link-molecule
-            to="/login"
-            label="すでにアカウントをお持ちの方はこちら"
-          />
-        </template>
       </signup-organism>
-    </template>
-    <template v-slot:footer>
-      <footer-organism>
-        <template v-slot:powered>
-          <powered-by-molecule
-            imgPath="/img/hoge@2x.png"
-            alt="Powered By Dadainu"
-          />
-        </template>
-      </footer-organism>
     </template>
   </signup-template>
 </template>
@@ -118,15 +60,9 @@ import { mapActions } from 'vuex';
 import Axios from 'axios';
 import SignUpTemplate from '@/front/component/templates/signup/SignUpTemplate.vue';
 import LogoOrganism from '@/front/component/organisms/header/LogoOrganism.vue';
-import FooterOrganism from '@/front/component/organisms/footer/FooterOrganism.vue';
-import LogoImgMolecule from '@/front/component/molecules/header/LogoImgMolecule.vue';
-import PoweredByMolecule from '@/front/component/molecules/footer/PoweredByMolecule.vue';
 import SignUpOrganism from '@/front/component/organisms/signup/SignUpOrganism.vue';
 import InputTextMolecule from '@/front/component/molecules/input/InputTextMolecule.vue';
 import InputPasswordMolecule from '@/front/component/molecules/input/InputPasswordMolecule.vue';
-import AnnotationMolecule from '@/front/component/molecules/text/AnnotationMolecule.vue';
-import LoginLinkMolecule from '@/front/component/molecules/signup/LoginLinkMolecule.vue';
-import NoteMolecule from '@/front/component/molecules/text/NoteMolecule.vue';
 import TitleMolecule from '@/front/component/molecules/text/TitleMolecule.vue';
 import ButtonMolecule from '@/front/component/molecules/button/ButtonMolecule.vue';
 
@@ -266,19 +202,10 @@ export default Vue.extend({
   components: {
     'signup-template': SignUpTemplate,
     'logo-organism': LogoOrganism,
-    'footer-organism': FooterOrganism,
-    'logo-img-molecule': LogoImgMolecule,
-    'powered-by-molecule': PoweredByMolecule,
     'signup-organism': SignUpOrganism,
     'input-text-molecule': InputTextMolecule,
     'input-password-molecule': InputPasswordMolecule,
-    // 'term-privacy-organism': TermPrivacyOrganism,
-    // 'term-privacy-molecule': TermPrivacyMolecule,
-    // 'term-privacy-checkbox-molecule': TermPrivacyCheckBoxMolecule,
-    'annotation-molecule': AnnotationMolecule,
-    'login-link-molecule': LoginLinkMolecule,
     'title-molecule': TitleMolecule,
-    'note-molecule': NoteMolecule,
     'button-molecule': ButtonMolecule,
   },
 });

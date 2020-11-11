@@ -11,22 +11,6 @@ Vue.use(Router);
 
 const router = new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'top',
-    //   component: Lp,
-    //   meta: {
-    //     isPublic: true,
-    //   },
-    // },
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: Login,
-    //   meta: {
-    //     isPublic: true,
-    //   },
-    // },
     {
       path: '/newsimpleregist',
       name: 'newsimpleregist',
@@ -35,11 +19,6 @@ const router = new Router({
         isPublic: true,
       },
     },
-    // {
-    //   path: '/manage',
-    //   name: 'manageTop',
-    //   component: Top,
-    // },
   ],
 });
 
@@ -82,16 +61,9 @@ router.beforeEach((to, _from, next) => {
       next(loginPath);
       return;
     }
-    // const loginId = Store.state.auth.loginId;
     const key = hogeCookie[1];
-    // if (loginId === '' || key === '') {
-    //   sessionStorage.removeItem(cookieName);
-    //   next(loginPath);
-    //   return;
-    // }
     const param = {
       params: {
-        // loginId: loginId,
         key: key,
       },
     };
